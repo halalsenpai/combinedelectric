@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Allow: /blog/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Sitemaps
+Sitemap: https://karachisolarwala.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10
+
+# Disallow duplicate/utility pages
+Disallow: /thank-you
+Disallow: /404
+Disallow: /error 
