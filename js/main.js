@@ -1089,4 +1089,51 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', updateTOC);
     updateTOC(); // Initial call
 });
+
+// Quick Contact Form Handler
+const quickContactForm = document.getElementById('quick-contact-form');
+if (quickContactForm) {
+    quickContactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(quickContactForm);
+        const name = formData.get('name');
+        const phone = formData.get('phone');
+        const bill = formData.get('bill') || 'Not provided';
+        
+        // Format the WhatsApp message
+        const message = `Hello! I'm interested in solar installation.\n\n` +
+            `Name: ${name}\n` +
+            `Phone: ${phone}\n` +
+            `Monthly Bill: ${bill} PKR\n\n` +
+            `Please provide me with a quote.`;
+        
+        // Format the phone number (remove any spaces or special characters)
+        const whatsappNumber = CONFIG.WHATSAPP.NUMBER;
+        
+        // Create WhatsApp URL
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        
+        try {
+            // Open WhatsApp in a new tab
+            window.open(whatsappUrl, '_blank');
+            
+            // Reset form
+            quickContactForm.reset();
+            
+        } catch (error) {
+            console.error('Form submission error:', error);
+            alert('Sorry, there was an error. Please try again.');
+        }
+    });
+}
+
+// Function to open WhatsApp chat
+function openWhatsApp() {
+    const message = CONFIG.WHATSAPP.DEFAULT_MESSAGE;
+    const whatsappNumber = CONFIG.WHATSAPP.NUMBER;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+}
  
