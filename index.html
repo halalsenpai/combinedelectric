@@ -132,15 +132,14 @@
                     <span class="logo-icon">☀️</span>
                 </div>
             </a>
-            <div class="d-flex align-items-center">
-                <a href="tel:+923362200720" class="header-phone d-none d-md-flex">
-                    <i class="bi bi-telephone-fill"></i>
-                    +92 336 220 0720
-                </a>
-                <a href="tel:+923362200720" class="header-phone-mobile d-md-none">
+            <div class="d-flex align-items-center gap-2">
+                <a href="tel:+923362200720" class="btn btn-outline-primary btn-sm d-md-none">
                     <i class="bi bi-telephone-fill"></i>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <a href="https://wa.me/923362200720" class="btn btn-success btn-sm d-md-none">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+                <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
@@ -183,6 +182,10 @@
                         <a class="btn btn-primary ms-lg-3" href="#contact">Get Quote</a>
                     </li>
                 </ul>
+            </div>
+            <div class="language-switcher d-none d-md-flex me-3">
+                <button class="btn btn-sm btn-outline-secondary active" data-lang="en">English</button>
+                <button class="btn btn-sm btn-outline-secondary" data-lang="ur">اردو</button>
             </div>
         </div>
     </nav>
@@ -311,10 +314,10 @@
         </section>
 
         <div class="whatsapp-cta">
-            <button onclick="openWhatsApp()" class="btn btn-whatsapp">
+            <!-- <button onclick="openWhatsApp()" class="btn btn-whatsapp">
                 <i class="bi bi-whatsapp"></i>
                 Chat on WhatsApp
-            </button>
+            </button> -->
         </div>
 
         <!-- Services Section -->
@@ -475,207 +478,7 @@
         </section>
 
         <!-- Video Testimonials Section -->
-        <section class="testimonials-section bg-light">
-            <div class="container">
-                <div class="section-header text-center mb-5">
-                    <h2 class="display-5 fw-bold mb-3">Our Happy Clients</h2>
-                    <p class="text-muted lead">See what our clients in Karachi say about their solar experience</p>
-                    <div class="swipe-indicator d-md-none">
-                        <i class="bi bi-arrow-left-right"></i>
-                        <span>Swipe to explore</span>
-                    </div>
-                </div>
-                <div class="testimonials-scroll">
-                    <!-- Testimonial 1 - DHA -->
-                    <div class="testimonial-card bg-white rounded-4 shadow-sm p-4">
-                        <div class="video-wrapper mb-3 rounded-3 overflow-hidden">
-                            <div class="play-button">
-                                <i class="bi bi-play-fill"></i>
-                            </div>
-                            <div class="ratio ratio-16x9">
-                                <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" 
-                                    title="DHA Client Testimonial" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                    allowfullscreen
-                                    loading="lazy"></iframe>
-                            </div>
-                        </div>
-                        <div class="testimonial-content">
-                            <div class="client-info mb-3">
-                                <h5 class="mb-1">Ahmed Khan</h5>
-                                <div class="location">
-                                    <i class="bi bi-geo-alt"></i>
-                                    <span>DHA Phase 6, Karachi</span>
-                                </div>
-                            </div>
-                            <div class="testimonial-text">
-                                <p class="mb-0">"Installed 10kW system - bills reduced from 45,000 to just 8,000! Professional installation and great after-sales support."</p>
-                            </div>
-                            <div class="testimonial-stats">
-                                <div class="stat-item">
-                                    <span class="stat-value">10kW</span>
-                                    <span class="stat-label">System Size</span>
-                                </div>
-                                <div class="stat-item">
-                                    <span class="stat-value">82%</span>
-                                    <span class="stat-label">Bill Reduction</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Testimonial 2 - Clifton -->
-                    <div class="testimonial-card bg-white rounded-4 shadow-sm p-4">
-                        <div class="video-wrapper mb-3 rounded-3 overflow-hidden">
-                            <div class="play-button">
-                                <i class="bi bi-play-fill"></i>
-                            </div>
-                            <div class="ratio ratio-16x9">
-                                <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" 
-                                    title="Clifton Client Testimonial" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                    allowfullscreen
-                                    loading="lazy"></iframe>
-                            </div>
-                        </div>
-                        <div class="testimonial-content">
-                            <div class="client-info mb-3">
-                                <h5 class="mb-1">Fatima Syed</h5>
-                                <div class="location">
-                                    <i class="bi bi-geo-alt"></i>
-                                    <span>Clifton Block 5, Karachi</span>
-                                </div>
-                            </div>
-                            <div class="testimonial-text">
-                                <p class="mb-0">"Best investment for our home. Net metering setup was hassle-free, and we're saving significantly on electricity bills."</p>
-                            </div>
-                            <div class="testimonial-stats">
-                                <div class="stat-item">
-                                    <span class="stat-value">8kW</span>
-                                    <span class="stat-label">System Size</span>
-                                </div>
-                                <div class="stat-item">
-                                    <span class="stat-value">75%</span>
-                                    <span class="stat-label">Bill Reduction</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Testimonial 3 - PECHS -->
-                    <div class="testimonial-card bg-white rounded-4 shadow-sm p-4">
-                        <div class="video-wrapper mb-3 rounded-3 overflow-hidden">
-                            <div class="play-button">
-                                <i class="bi bi-play-fill"></i>
-                            </div>
-                            <div class="ratio ratio-16x9">
-                                <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" 
-                                    title="PECHS Client Testimonial" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                    allowfullscreen
-                                    loading="lazy"></iframe>
-                            </div>
-                        </div>
-                        <div class="testimonial-content">
-                            <div class="client-info mb-3">
-                                <h5 class="mb-1">Mohammad Ali</h5>
-                                <div class="location">
-                                    <i class="bi bi-geo-alt"></i>
-                                    <span>PECHS Block 6, Karachi</span>
-                                </div>
-                            </div>
-                            <div class="testimonial-text">
-                                <p class="mb-0">"Excellent service from start to finish. The team was professional and completed installation ahead of schedule."</p>
-                            </div>
-                            <div class="testimonial-stats">
-                                <div class="stat-item">
-                                    <span class="stat-value">12kW</span>
-                                    <span class="stat-label">System Size</span>
-                                </div>
-                                <div class="stat-item">
-                                    <span class="stat-value">90%</span>
-                                    <span class="stat-label">Bill Reduction</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <style>
-                    .testimonials-scroll {
-                        display: grid;
-                        grid-template-columns: repeat(3, 1fr);
-                        gap: 2rem;
-                    }
-
-                    .testimonial-stats {
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
-                        gap: 0.75rem;
-                        margin-top: 1.5rem;
-                    }
-
-                    .stat-item {
-                        display: grid;
-                        text-align: center;
-                    }
-
-                    @media (max-width: 991px) {
-                        .testimonials-scroll {
-                            display: flex;
-                            overflow-x: auto;
-                            scroll-snap-type: x mandatory;
-                            scroll-padding: 1rem;
-                            gap: 1rem;
-                            padding: 1rem;
-                            margin: -1rem;
-                        }
-
-                        .testimonial-card {
-                            flex: 0 0 85%;
-                            scroll-snap-align: start;
-                            scroll-snap-stop: always;
-                        }
-
-                        /* Hide scrollbar but keep functionality */
-                        .testimonials-scroll {
-                            -ms-overflow-style: none;
-                            scrollbar-width: none;
-                        }
-
-                        .testimonials-scroll::-webkit-scrollbar {
-                            display: none;
-                        }
-
-                        /* Add scroll indicator */
-                        .testimonials-section {
-                            position: relative;
-                        }
-
-                        .testimonials-section::after {
-                            content: '';
-                            position: absolute;
-                            right: 0;
-                            top: 50%;
-                            width: 3rem;
-                            height: 100%;
-                            background: linear-gradient(to right, transparent, rgba(255,255,255,0.9));
-                            pointer-events: none;
-                        }
-                    }
-
-                    @media (max-width: 768px) {
-                        .testimonial-card {
-                            flex: 0 0 90%;
-                        }
-
-                        .testimonials-scroll {
-                            gap: 0.75rem;
-                            padding: 0.75rem;
-                            margin: -0.75rem;
-                        }
-                    }
-                </style>
                 
                 <!-- CTA Button -->
                 <div class="text-center mt-4 mt-md-5">
@@ -1158,7 +961,7 @@
                     <!-- Residential Solution -->
                     <div class="solution-card">
                         <div class="solution-card-image">
-                            <img src="images/residential-solar.jpg" alt="Residential Solar Installation" class="img-fluid">
+                            <img src="images/residential-solar.jpg" alt="Residential Solar Installation" class="img-fluid" loading="lazy">
                         </div>
                         <div class="solution-card-content">
                             <h3>Residential Solar</h3>
@@ -1206,9 +1009,12 @@
                         <p class="mt-3 text-muted">Professional solar solutions tailored for Karachi's climate and energy needs.</p>
                     </div>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.facebook.com/CombinedWorks" class="social-link"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="bi bi-whatsapp"></i></a>
+                        <a href="https://wa.me/923212444978" class="social-link" target="_blank">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                        
                     </div>
                 </div>
 
@@ -1233,7 +1039,7 @@
                         </li>
                         <li>
                             <i class="bi bi-telephone"></i>
-                            <span>+92 336 220 0720 (24/7 Support)</span>
+                            <span>+92 3268921468 (24/7 Support)</span>
                         </li>
                     </ul>
                 </div>
@@ -1297,5 +1103,54 @@
             </div>
         </div>
     </div>
+
+    <div class="whatsapp-sticky">
+        <a href="https://wa.me/923281880507" class="whatsapp-btn">
+            <i class="bi bi-whatsapp"></i>
+            <span class="d-none d-md-inline">Chat on WhatsApp</span>
+        </a>
+    </div>
+
+    <style>
+    .whatsapp-sticky {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .whatsapp-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: #25D366;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .whatsapp-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        .whatsapp-btn {
+            width: 48px;
+            height: 48px;
+            padding: 0;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .whatsapp-btn i {
+            font-size: 24px;
+        }
+    }
+    </style>
 </body>
 </html> 
