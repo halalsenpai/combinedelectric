@@ -253,7 +253,7 @@
                                             <span class="input-group-text bg-light border-0">
                                                 <i class="bi bi-person text-primary"></i>
                                             </span>
-                                            <input type="text" class="form-control border-0" placeholder="Your Name" required 
+                                            <input type="text" name="name" class="form-control border-0" placeholder="Your Name" required 
                                                 pattern="[A-Za-z\s]{3,50}" title="Please enter a valid name (3-50 characters)">
                                         </div>
                                     </div>
@@ -262,30 +262,8 @@
                                             <span class="input-group-text bg-light border-0">
                                                 <i class="bi bi-phone text-primary"></i>
                                             </span>
-                                            <input type="tel" class="form-control border-0" placeholder="Phone Number" required 
+                                            <input type="tel" name="phone" class="form-control border-0" placeholder="Phone Number" required 
                                                 pattern="[0-9]{11}" title="Please enter a valid 11-digit phone number">
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <div class="dropdown area-dropdown">
-                                            <div class="input-group">
-                                                <span class="input-group-text bg-light border-0">
-                                                    <i class="bi bi-geo-alt text-primary"></i>
-                                                </span>
-                                                <button class="form-control dropdown-toggle border-0" type="button" id="areaDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <span class="selected-option" data-placeholder="Select Your Area" data-translate="select_area">Select Your Area</span>
-                                                </button>
-                                                <ul class="dropdown-menu w-100" aria-labelledby="areaDropdown">
-                                                    <li><a class="dropdown-item" href="#" data-value="dha" data-translate="area_dha">DHA (All Phases)</a></li>
-                                                    <li><a class="dropdown-item" href="#" data-value="clifton" data-translate="area_clifton">Clifton</a></li>
-                                                    <li><a class="dropdown-item" href="#" data-value="gulshan" data-translate="area_gulshan">Gulshan-e-Iqbal</a></li>
-                                                    <li><a class="dropdown-item" href="#" data-value="nazimabad" data-translate="area_nazimabad">Nazimabad</a></li>
-                                                    <li><a class="dropdown-item" href="#" data-value="defence" data-translate="area_defence">Defence</a></li>
-                                                    <li><a class="dropdown-item" href="#" data-value="pechs" data-translate="area_pechs">PECHS</a></li>
-                                                    <li><a class="dropdown-item" href="#" data-value="north_karachi" data-translate="area_north">North Karachi</a></li>
-                                                    <li><a class="dropdown-item" href="#" data-value="other" data-translate="area_other">Other Areas</a></li>
-                                                </ul>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="mb-3">
@@ -293,7 +271,7 @@
                                             <span class="input-group-text bg-light border-0">
                                                 <i class="bi bi-currency-dollar text-primary"></i>
                                             </span>
-                                            <input type="number" class="form-control border-0" placeholder="Monthly Bill (PKR) (Optional)" 
+                                            <input type="number" name="bill" class="form-control border-0" placeholder="Monthly Bill (PKR) (Optional)" 
                                                 min="1000" max="1000000" step="100">
                                         </div>
                                     </div>
@@ -315,6 +293,7 @@
 
         <div class="whatsapp-cta">
             <!-- <button onclick="openWhatsApp()" class="btn btn-whatsapp">
+            <button onclick="openWhatsApp();" class="btn btn-whatsapp">
                 <i class="bi bi-whatsapp"></i>
                 Chat on WhatsApp
             </button> -->
@@ -484,7 +463,7 @@
                 <div class="text-center mt-4 mt-md-5">
                     <a href="#contact" class="btn btn-primary btn-lg">
                         Get Your Solar Success Story
-                        <small class="urdu-text ms-2">- آج ہی شروع کریں</small>
+                        <small class="urdu-text ms-2">- آج ی شروع کریں</small>
                     </a>
                 </div>
             </div>
@@ -992,6 +971,125 @@
             </div>
         </section>
 
+        <!-- Projects/Portfolio Section -->
+        <section class="py-5 bg-light" id="projects">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="highlight-badge mb-3">Recent Projects</span>
+                    <h2 class="display-5 fw-bold">Our Solar Success Stories</h2>
+                    <p class="text-muted lead">Real installations, real results</p>
+                </div>
+                <div class="row g-4">
+                    <!-- Project 1 -->
+                    <div class="col-md-6">
+                        <div class="card h-100 project-card" data-bs-toggle="modal" data-bs-target="#project1Modal">
+                            <img src="https://res.cloudinary.com/dpz0xofvt/image/upload/v1734522191/WhatsApp_Image_2024-12-18_at_16.05.53_itowuo.jpg" 
+                                class="card-img-top" 
+                                alt="Solar Panel Installation in Karachi"
+                                loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title">Gulistan-e-Johar Project</h5>
+                                <p class="card-text">7kW On-Grid System | 240 Yards</p>
+                                <div class="project-specs">
+                                    <span class="badge bg-primary">Net Metering</span>
+                                    <span class="badge bg-success">Completed 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="col-md-6">
+                        <div class="card h-100 project-card" data-bs-toggle="modal" data-bs-target="#project2Modal">
+                            <img src="https://res.cloudinary.com/dpz0xofvt/image/upload/v1734522191/WhatsApp_Image_2024-12-18_at_16.05.52_fn5j9x.jpg" 
+                                class="card-img-top" 
+                                alt="Residential Solar Installation in Gulshan"
+                                loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title">Gulshan-e-Iqbal Project</h5>
+                                <p class="card-text">5kW On-Grid System | 240 Yards</p>
+                                <div class="project-specs">
+                                    <span class="badge bg-primary">Net Metering</span>
+                                    <span class="badge bg-success">Completed 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Modals -->
+        <!-- Project 1 Modal -->
+        <div class="modal fade" id="project1Modal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Gulistan-e-Johar Installation</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="project-gallery mb-4">
+                            <!-- Add more project images here -->
+                            <img src="https://res.cloudinary.com/dpz0xofvt/image/upload/v1734522191/WhatsApp_Image_2024-12-18_at_16.05.53_itowuo.jpg" 
+                                class="img-fluid mb-3" alt="Installation View">
+                        </div>
+                        <div class="project-details">
+                            <h6 class="fw-bold mb-3">System Specifications</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>7kW Grid-Tied System</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>20x 540W Tier-1 Solar Panels</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>7kW Growatt Inverter</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>K-Electric Net Metering</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Smart Monitoring System</li>
+                            </ul>
+                            <h6 class="fw-bold mb-3 mt-4">Performance Metrics</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-graph-up text-primary me-2"></i>Monthly Generation: ~875 kWh</li>
+                                <li><i class="bi bi-cash text-primary me-2"></i>Monthly Savings: ~PKR 35,000</li>
+                                <li><i class="bi bi-sun text-primary me-2"></i>CO2 Offset: 12 tons/year</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 Modal -->
+        <div class="modal fade" id="project2Modal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Gulshan-e-Iqbal Installation</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="project-gallery mb-4">
+                            <!-- Add more project images here -->
+                            <img src="https://res.cloudinary.com/dpz0xofvt/image/upload/v1734522191/WhatsApp_Image_2024-12-18_at_16.05.52_fn5j9x.jpg" 
+                                class="img-fluid mb-3" alt="Installation View">
+                        </div>
+                        <div class="project-details">
+                            <h6 class="fw-bold mb-3">System Specifications</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>5kW Grid-Tied System</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>15x 540W Tier-1 Solar Panels</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>5kW Growatt Inverter</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>K-Electric Net Metering</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Remote Monitoring Setup</li>
+                            </ul>
+                            <h6 class="fw-bold mb-3 mt-4">Performance Metrics</h6>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-graph-up text-primary me-2"></i>Monthly Generation: ~625 kWh</li>
+                                <li><i class="bi bi-cash text-primary me-2"></i>Monthly Savings: ~PKR 25,000</li>
+                                <li><i class="bi bi-sun text-primary me-2"></i>CO2 Offset: 8.5 tons/year</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!-- Footer -->
@@ -1071,8 +1169,10 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Config must be loaded before main.js -->
+    <script src="js/config.js"></script>
     <!-- Custom JS -->
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js"></script>
 
     <!-- Quote Modal -->
     <div class="modal fade" id="quoteModal" tabindex="-1">
